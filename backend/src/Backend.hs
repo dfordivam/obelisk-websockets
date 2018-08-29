@@ -3,7 +3,6 @@ module Backend where
 
 import Common.Api
 import Frontend
-import qualified Obelisk.Backend as Ob
 
 import Control.Lens
 import qualified Data.ByteString.Char8 as BSC8

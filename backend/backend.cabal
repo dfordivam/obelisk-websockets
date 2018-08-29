@@ -10,7 +10,10 @@ library
   build-depends: base-noprelude
                , common
                , frontend
-               , obelisk-backend
+               , obelisk-asset-serve-snap
+               , obelisk-snap
+               , snap
+               , snap-server
                , reflex-websocket-interface-server
                , reflex-websocket-interface-shared
   exposed-modules:
@@ -30,7 +33,6 @@ executable backend
                , frontend
                , lens
                , modern-uri
-               , obelisk-backend
                , obelisk-executable-config
                , obelisk-executable-config-inject
                , text
