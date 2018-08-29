@@ -14,10 +14,12 @@ library
                , obelisk-snap
                , snap
                , snap-server
+               , websockets-snap
                , reflex-websocket-interface-server
                , reflex-websocket-interface-shared
   exposed-modules:
     Backend
+    WebSocketHandler.WsHandler
   ghc-options: -Wall
   default-extensions: OverloadedStrings
 

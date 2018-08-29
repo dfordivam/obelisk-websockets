@@ -6,7 +6,7 @@ build-type: Simple
 library
   hs-source-dirs: src
   build-depends: base-noprelude
-               , papa
+               , protolude
                , reflex-websocket-interface-shared
 
   default-extensions: OverloadedStrings
