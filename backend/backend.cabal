@@ -7,20 +7,24 @@ library
   hs-source-dirs: src
   if impl(ghcjs)
     buildable: False
-  build-depends: base
+  build-depends: base-noprelude
                , common
                , frontend
                , obelisk-backend
+               , reflex-websocket-interface-server
+               , reflex-websocket-interface-shared
   exposed-modules:
     Backend
   ghc-options: -Wall
+  default-extensions: OverloadedStrings
 
 executable backend
   main-is: main.hs
-  hs-source-dirs: src
+  hs-source-dirs: app
+  default-extensions: OverloadedStrings
   if impl(ghcjs)
     buildable: False
-  build-depends: base
+  build-depends: base-noprelude
                , backend
                , common
                , frontend

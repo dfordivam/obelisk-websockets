@@ -5,19 +5,22 @@ build-type: Simple
 
 library
   hs-source-dirs: src
-  build-depends: base
+  build-depends: base-noprelude
                , common
                , reflex-dom
                , static
                , text
+               , reflex-websocket-interface
+               , reflex-websocket-interface-shared
   exposed-modules:
     Frontend
   ghc-options: -Wall
+  default-extensions: OverloadedStrings
 
 executable frontend
   main-is: main.hs
-  hs-source-dirs: src
-  build-depends: base
+  hs-source-dirs: app
+  build-depends: base-noprelude
                , common
                , reflex-dom
                , static
@@ -25,5 +28,6 @@ executable frontend
                , frontend
   --TODO: Make these ghc-options optional
   ghc-options: -threaded
+  default-extensions: OverloadedStrings
   if os(darwin)
      ghc-options: -dynamic
